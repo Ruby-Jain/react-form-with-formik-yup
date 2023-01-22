@@ -1,0 +1,21 @@
+.navbar{
+    left: 30em;
+    position: relative;
+    display: flex;
+    text-decoration: none;
+}
+.navitem{
+    padding-right: 20px;
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-between;
+}
+.hr{
+    width: 100vw;
+}
+.h{
+    font-family: 'Verdana';
+    position: relative;
+    right: 500px;
+    letter-spacing: 3px;
+}
