@@ -27,10 +27,12 @@ function App() {
         <div className="App">
             <BrowserRouter>
                 <Routes>
+                {/* index indicates home compo or the default page or it's like navbar */}
                     <Route index element={<Layout />} />
-
+                    {/* manageconfig is parent route */}
                     <Route path="manageconfig" element={<Manageconfig getformData={getData} />}>
                         <Route path="yearrange" element={<Yearrange onSubmit={getData} />}>
+                        {/* yearrange is parent compo and sub-compo of manageconfig compo */}
                             <Route path="dimensions" element={<Dimensions />} />
                             <Route path="activityunits" element={<Activityunits />} />
                             <Route path="fuelblendings" element={<Fuelblendings />} />

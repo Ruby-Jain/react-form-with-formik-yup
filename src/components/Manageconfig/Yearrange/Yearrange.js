@@ -40,8 +40,9 @@ import { useNavigate } from 'react-router';
     console.log("current date cannot be more than middle date");
   }*/
 const Yearrange = (props) => {
-    const [submit, setsubmit] = useState(false);
-    const navigate = useNavigate();
+    const [submit, setsubmit] = useState(false); 
+    //state for checking whther form is submitted or not
+    const navigate = useNavigate(); 
 
     const defaultValues = {
         initialyear: "",
@@ -84,7 +85,8 @@ const Yearrange = (props) => {
             props.onSubmit(values);
             setsubmit(true)
             navigate('dimensions')
-        };
+        }; /* once form gets submitted navigate to dimentions compo */
+
     /* const lvalues=localStorage.setItem("formvalues", JSON.stringify(values));
         return lvalues */
 
@@ -104,18 +106,18 @@ const Yearrange = (props) => {
                             className="formdates"
                             id="initialyear"
                             name="initialyear"
-                        />
+                        /> {/*feild in formik is input in html  */}
                         <ErrorMessage name="initialyear" />
                     </div>
 
                     <div className="dates">
                         <label className="space">Intermediate Year</label>
-                        <Field
+                        <Field 
                             className="formdates"
                             type="date"
                             id="intermediateyear"
                             name="intermediateyear"
-                        />
+                        /> {/*feild in formik is input in html  */}
                         <ErrorMessage name="intermediateyear" />
                     </div>
 
@@ -135,7 +137,8 @@ const Yearrange = (props) => {
 
                 </Form>
             </Formik>
-            {submit ? (<Outlet/>) : (<h3 style={{color:"red",textAlign:"center",bottom:"2rem",right:"31rem",position:"relative"}}>Plz submit the form to proceed to Dimensions</h3>)}
+            {submit ? (<Outlet/>) : (<h3 style={{color:"red",textAlign:"center",bottom:"2rem",right:"31rem",position:"relative"}}>Plz submit the form to proceed to Dimensions</h3>)} 
+            {/*if form is submitted it displays dimension compo else display statement  */}
 
             
         </div>
