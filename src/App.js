@@ -1,10 +1,11 @@
 import {
-  BrowserRouter,
-  Routes,
-  Route,
+    BrowserRouter,
+    Routes,
+    Route,
+    Outlet,
 } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
-import { useState } from "react";
+//import { useState } from "react";
 import Manageassump from "./components/Manageassump/Mangeassump";
 import Manageconfig from "./components/Manageconfig/Manageconfig";
 import Explorescenario from "./components/Explorescenario/Explorescenario";
@@ -18,33 +19,31 @@ import "./App.css";
 function App() {
 
 
-  const getData = (formData) => {
-    console.log("form submitted", formData);
-  };
+    const getData = (formData) => {
+        console.log("form submitted", formData);
+    };
 
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Layout />} />
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Routes>
+                    <Route index element={<Layout />} />
 
-          <Route path="manageconfig" element={<Manageconfig getformData={getData}/>}>
-            <Route
-              path="yearrange"
-              element={<Yearrange onSubmit={getData}/>}
-            />
-
-            <Route path="dimensions" element={<Dimensions />} />
-            <Route path="activityunits" element={<Activityunits />} />
-            <Route path="fuelblendings" element={<Fuelblendings />} />
-            <Route path="explorescenario" element={<Explorescenario />} />
-            <Route path="manageassump" element={<Manageassump />} />
-            <Route path="explorescenario" element={<Explorescenario />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+                    <Route path="manageconfig" element={<Manageconfig getformData={getData} />}>
+                        <Route path="yearrange" element={<Yearrange onSubmit={getData} />}>
+                            <Route path="dimensions" element={<Dimensions />} />
+                            <Route path="activityunits" element={<Activityunits />} />
+                            <Route path="fuelblendings" element={<Fuelblendings />} />
+                        </Route>
+                        <Route path="explorescenario" element={<Explorescenario />} />
+                        <Route path="manageassump" element={<Manageassump />} />
+                        <Route path="explorescenario" element={<Explorescenario />} />
+                    </Route>
+                    <Route />
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
