@@ -7,13 +7,13 @@
   justify-content: space-between;
   text-align: center;
 }
-.formdates{
-    padding:15px;
-    width: 380px;
-    margin: 15px;
-    display: flex;
-    justify-content: space-between;
+.formdates {
+  padding: 15px;
+  width: 380px;
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
 }
-.space{
-    padding: 20px;
-}
+/* .space {
+  padding: 20px;
+} */

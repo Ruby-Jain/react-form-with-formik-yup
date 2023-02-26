@@ -7,7 +7,7 @@ import { useState } from "react";
 
 import { useState } from "react";
 import { Form, Field, Formik } from "formik";
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet} from "react-router-dom";
 import * as Yup from "yup";
 //import { date, lazy, object, ref } from "yup";
 import { ErrorMessage } from "formik";
@@ -137,7 +137,7 @@ const Yearrange = (props) => {
 
                 </Form>
             </Formik>
-            {submit ? (<Outlet/>) : (<h3 style={{color:"red",textAlign:"center",bottom:"2rem",right:"31rem",position:"relative"}}>Plz submit the form to proceed to Dimensions</h3>)} 
+            {submit ? (<Outlet/>) : (<h3 style={{color:"red",textAlign:"center",bottom:"5rem",right:"29rem",position:"relative"}}>Plz complete this form to proceed to the Next Tab</h3>)} 
             {/*if form is submitted it displays dimension compo else display statement  */}
 
             
